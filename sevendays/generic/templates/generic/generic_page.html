@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+
+{% endblock extra_css %}
+
+{% block content %}
+    {% image page.banner_image width-400 as img%}
+    <img src="{{img.url}}" alt="{{image.alt}}">
+    <h2>C'mon man, that's too easy</h2>
+    <p>{{page.introduction}}</p>
+
+
+
+
+{% endblock content %}
